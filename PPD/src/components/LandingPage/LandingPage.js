@@ -11,7 +11,6 @@ const LandingContainer = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 100px;
 `
 
 const LandingPage = () => {
@@ -20,9 +19,9 @@ const LandingPage = () => {
         <BackgroundSection>
             <LandingContainer>
                 <h1>Experience peace of mind with a quality finish</h1>
-                <Nav />
             </LandingContainer>
         </BackgroundSection>
+        <Nav />
         </>
     )
 }

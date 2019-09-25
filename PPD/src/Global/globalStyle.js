@@ -55,14 +55,17 @@ header {
 }
 
 nav {
-  position: relative;
+  position: fixed;
+  bottom: 0;
+  left: 0;
   display: flex;
   font-size: 0.9rem;
   align-items: center;
   height: 100%;
-  width: 35%;
-  justify-content: space-between;
+  width: 100%;
+  justify-content: center;
   max-height: 100px;
+  margin: 0 auto;
 }
 
 h1 {
@@ -70,6 +73,7 @@ h1 {
   line-height: 130%;
   font-weight: 800;
   text-align: center;
+  width: 80%;
 }
 
 .name {
@@ -94,7 +98,7 @@ hr {
   opacity: 0.3;
 }
 
-footer {
+form {
   position: relative;
   display: flex;
   font-size: 0.9rem;
@@ -159,12 +163,6 @@ button:focus {
 
 button:active {
   background: tranparent;
-}
-
-hr {
-  @media (max-width: 1024px) {
-    display: none;
-  }
 }
 
 p {

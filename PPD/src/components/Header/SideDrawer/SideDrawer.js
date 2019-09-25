@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Spring, animated as a } from 'react-spring/renderprops'
 import styled from 'styled-components'
 
-const SideDrawerContainer = styled(a.footer)`
+const SideDrawerContainer = styled(a.form)`
   height: 100vh;
   max-height: 100vh;
   background: #EAE9E7;
