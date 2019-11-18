@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
-export const Services = () => {
-  return <Section>Services Section</Section>;
+export const Gallery = () => {
+  return <Section>Gallery Section</Section>;
 };
 
 const Section = styled.section`
