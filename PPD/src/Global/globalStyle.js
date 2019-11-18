@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from "styled-components";
 export const GlobalStyle = createGlobalStyle`
 
 
@@ -57,30 +57,42 @@ header {
 nav {
   position: fixed;
   bottom: 0;
-  left: 0;
-  display: flex;
+  right: 0;
   font-size: 0.9rem;
-  align-items: center;
   height: 100%;
-  width: 100%;
-  justify-content: center;
+  width: 950px;
+  background-color: white;
   max-height: 100px;
-  margin: 0 auto;
+  @media(max-width: 950px) {
+    width: 100%;
+  }
 }
 
 h1 {
-  font-size: 2.441rem;
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-size: 3.157rem;
   line-height: 130%;
-  font-weight: 800;
-  text-align: center;
-  width: 80%;
+  font-weight: 700;
+  text-align: left;
+  letter-spacing: 0.2px;
+}
+
+
+p {
+  font-family: 'Merriweather', Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  line-height: 145%;
+  font-weight: normal;
+  text-align: left;
+  letter-spacing: 0.6px;
+  color: #4F4F4F;
 }
 
 .name {
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
   font-size: 1rem;
-  margin-left: 0.5rem;
+  margin-left: 1rem;
   font-weight: 700;
-  text-transform: uppercase;
   text-align: center;
 
 }
@@ -88,14 +100,6 @@ h1 {
 hr {
   box-sizing: content-box;
   display: block;
-  margin: 0 auto;
-  height: 2px;
-  width: 40%;
-  margin: 2rem 0 0 0;
-  overflow: visible;
-  border: none;
-  background-color: #2c2c2c;
-  opacity: 0.3;
 }
 
 form {
@@ -137,11 +141,12 @@ a {
 a:active,
 a:hover {
   outline-width: 0;
+  background-color: #FA9917;
 }
-
 
 button {
   font-size: inherit;
+  letter-spacing: 0.4px;
   display: inline-block;
   border: none;
   text-decoration: none;
@@ -165,7 +170,5 @@ button:active {
   background: tranparent;
 }
 
-p {
-  font-size: 1rem;
-}
-`
+
+`;

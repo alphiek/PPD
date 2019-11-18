@@ -1,37 +1,46 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import { Link } from "gatsby";
+import styled from "styled-components";
 
-
-const NavContainer = styled.nav`
-  box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.3);
+const NavLink = styled(Link)`
+  border: 4px solid grey;
+  height: 100%;
   width: 100%;
-`
-
-const NavWrapper = styled.div`
-  width: 30%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  @media (max-width: 1024px) {
-    width: 50%;
+  justify-content: center;
+  background-color: white;
+  &:nth-child(2) {
+    border-left: none;
+    border-right: none;
   }
-  @media (max-width: 768px) {
-    width: 80%;
+  &:nth-child(3) {
+    border-right: none;
   }
-`
+`;
+const NavWrapper = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 
 const Nav = () => {
-    return (
-        <>
-        <NavContainer>
-          <NavWrapper>
-            <a href='#www'>About Us</a>
-            <a href='#www'>Services</a>
-            <a href='#www'>Gallery</a>
-            </NavWrapper>
-        </NavContainer>
-        </>
-    )
-}
+  return (
+    <>
+      <nav>
+        <NavWrapper>
+          <NavLink to="/#about" activeStyle={{ backgroundColor: '#FA9917' }} partiallyActive={true}>
+            About Us
+          </NavLink>
+          <NavLink href="#www">Services</NavLink>
+          <NavLink href="#www">Gallery</NavLink>
+          <NavLink href="#www">Contact</NavLink>
+        </NavWrapper>
+      </nav>
+    </>
+  );
+};
 
-export default Nav
+export default Nav;

@@ -3,7 +3,7 @@ import Layout from './src/components/layout'
 import { GlobalStyle } from "./src/global/globalStyle"
 
 require('typeface-open-sans')
-require('typeface-kaushan-script')
+require('typeface-merriweather')
 
 
 export const wrapPageElement = ({ element }) => {
