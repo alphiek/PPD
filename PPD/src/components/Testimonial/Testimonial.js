@@ -30,7 +30,6 @@ const Section = styled.section`
 `;
 
 const Text = styled.p`
-font-family: 'Open Sans', Arial, Helvetica, sans-serif;
   color: white;
   text-align: center;
   margin: 0 auto;

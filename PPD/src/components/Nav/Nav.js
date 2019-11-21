@@ -3,13 +3,15 @@ import { Link } from "gatsby";
 import styled from "styled-components";
 
 const NavLink = styled(Link)`
-  border: 4px solid grey;
+  border: 2px solid grey;
   height: 100%;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: white;
+  color: #3d3f43;
+
   &:nth-child(2) {
     border-left: none;
     border-right: none;
@@ -31,12 +33,34 @@ const Nav = () => {
     <>
       <nav>
         <NavWrapper>
-          <NavLink to="/#about" activeStyle={{ backgroundColor: '#FA9917' }} partiallyActive={true}>
+          <NavLink
+            to="/#about"
+            activeStyle={{ backgroundColor: "#FA9917", border: "none" }}
+            partiallyActive={true}
+          >
             About Us
           </NavLink>
-          <NavLink href="#www">Services</NavLink>
-          <NavLink href="#www">Gallery</NavLink>
-          <NavLink href="#www">Contact</NavLink>
+          <NavLink
+            to="/#services"
+            activeStyle={{ backgroundColor: "#FA9917", border: "none" }}
+            partiallyActive={true}
+          >
+            Services
+          </NavLink>
+          <NavLink
+            to="/#gallery"
+            activeStyle={{ backgroundColor: "#FA9917", border: "none" }}
+            partiallyActive={true}
+          >
+            Gallery
+          </NavLink>
+          <NavLink
+            to="/#contact"
+            activeStyle={{ backgroundColor: "#FA9917", border: "none" }}
+            partiallyActive={true}
+          >
+            Contact
+          </NavLink>
         </NavWrapper>
       </nav>
     </>

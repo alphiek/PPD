@@ -15,14 +15,9 @@ body {
   font-size: 1rem;
   line-height: 140%;
   font-weight: normal;
-  text-rendering: optimizeLegibility;
   color: #3D3F43;
   word-wrap: normal;
   font-kerning: normal;
-
-  @media (max-width: 1024px) {
-    text-align: center;
-  }
 }
 
 * {
@@ -55,7 +50,7 @@ header {
 }
 
 nav {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   right: 0;
   font-size: 0.9rem;
@@ -75,6 +70,11 @@ h1 {
   font-weight: 700;
   text-align: left;
   letter-spacing: 0.2px;
+}
+
+h2 {
+  font-size: 2.369rem;
+  letter-spacing: 3px;
 }
 
 
@@ -102,16 +102,6 @@ hr {
   display: block;
 }
 
-form {
-  position: relative;
-  display: flex;
-  font-size: 0.9rem;
-  align-items: center;
-  height: 100%;
-  padding: 2rem;
-  max-height: 100px;
-}
-
 ul {
   list-style: none;
   list-style-image: none;
@@ -132,7 +122,7 @@ a {
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
-  color: #3D3F43;
+  color: inherit;
   @media (max-width: 1024px) {
     font-size: 1rem;
   }
@@ -170,5 +160,19 @@ button:active {
   background: tranparent;
 }
 
+input[type="checkbox"] {
+  transform: scale(2);
+  padding: 5px;
+}
 
+input:focus, textarea:focus, select:focus {
+  outline: none;
+}
+
+textarea, ::placeholder, input {
+  color: white;
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.6px;
+}
 `;
