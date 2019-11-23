@@ -5,11 +5,11 @@ import { Divider } from "../Utils/Divider";
 export const Services = () => {
   return (
     <Section id='services'>
-      <TextWrapperRight>
+      <div>
         <h2>Our Services and Skills</h2>
-        <DividerRight />
+        <Divider />
         <p>Take a look at our skills and services</p>
-      </TextWrapperRight>
+      </div>
     </Section>
   );
 };
@@ -26,8 +26,3 @@ const TextWrapperRight = styled.div`
   justify-content: flex-end;
   flex-direction: column;
 `;
-
-
-const DividerRight = styled(Divider)`
-  margin-left: 83%;
-`

@@ -38,6 +38,10 @@ const ImageOverlay = styled.div`
 const TextWrapper = styled.div`
   width: 500px;
   margin: 0 0 0 10%;
+  @media(max-width: 768px) {
+    width: 80%;
+    margin-top: 80px;
+  }
 `;
 
 const LogoWrapper = styled.div`

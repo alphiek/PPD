@@ -80,7 +80,7 @@ h1 {
 
 h2 {
   font-size: 2.369rem;
-  letter-spacing: 3px;
+  line-height: 130%;
 }
 
 
