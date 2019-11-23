@@ -134,7 +134,6 @@ a {
 a:active,
 a:hover {
   outline-width: 0;
-  background-color: #FA9917;
 }
 
 button {

@@ -20,7 +20,7 @@ export const Contact = () => {
 
 const Section = styled.section`
   width: 100%;
-  padding: 7% 10%;
+  padding: 7% 15%;
   background-color: ${colors.darkGrey};
 `;
 
