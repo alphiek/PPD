@@ -35,12 +35,11 @@ const BackgroundSection = ({ className, children }) => (
 
 const StyledBackgroundSection = styled(BackgroundSection)`
   width: 100%;
-  height: 90vh;
+  min-height: 90vh;
+  position: relative;
   background-position: top right;
   background-repeat: no-repeat;
   background-size: contain;
-  display: flex;
-  align-items: center;
 `
 
 export default StyledBackgroundSection

@@ -42,34 +42,40 @@ section {
 }
 
 header {
-  width: 100%;
   position: fixed;
   top: 0;
   right: 0;
   z-index: 50;
+  max-height: 100px;
 }
 
 nav {
-  position: absolute;
-  bottom: 0;
-  right: 0;
   font-size: 0.9rem;
+  z-index: 50;
+  position: fixed;
+  right: -1000px;
+  top: 0;
   height: 100%;
   width: 950px;
   background-color: white;
-  max-height: 100px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: slidein 0.8s ease-in-out 1s 1 forwards;
   @media(max-width: 950px) {
     width: 100%;
   }
 }
 
 h1 {
+  position: relative;
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
   font-size: 3.157rem;
   line-height: 130%;
   font-weight: 700;
   text-align: left;
-  letter-spacing: 0.2px;
+  letter-spacing: -0.5px;
 }
 
 h2 {
@@ -83,7 +89,6 @@ p {
   font-size: 1rem;
   line-height: 145%;
   font-weight: normal;
-  text-align: left;
   letter-spacing: 0.6px;
   color: #4F4F4F;
 }
@@ -93,7 +98,8 @@ p {
   font-size: 1rem;
   margin-left: 1rem;
   font-weight: 700;
-  text-align: center;
+  letter-spacing: 0;
+  text-transform: uppercase;
 
 }
 
@@ -123,9 +129,6 @@ a {
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   color: inherit;
-  @media (max-width: 1024px) {
-    font-size: 1rem;
-  }
 }
 
 a:active,
@@ -175,4 +178,16 @@ textarea, ::placeholder, input {
   font-size: 0.9rem;
   letter-spacing: 0.6px;
 }
+
+@keyframes slidein {
+  from {
+    right: -1000px;
+  }
+
+  to {
+    right: 0px;
+  }
+}
+
+
 `;

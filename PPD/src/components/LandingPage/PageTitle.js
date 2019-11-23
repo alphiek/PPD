@@ -1,17 +1,20 @@
 import React from "react";
 import styled from "styled-components";
-import { Dividers } from "../Dividers/Dividers";
+import { Divider } from "../Utils/Divider";
+import Logo from "./Logo";
 
 export const PageTitle = () => {
   return (
-    <div>
-      <TitleContainer>
+    <ImageOverlay>
+      <TextWrapper>
+        <LogoWrapper>
+          <Logo />
+          <p className="name">Paphos Painter Decorators</p>
+        </LogoWrapper>
         <h1>
           Peace of mind with <br />a quality finish
         </h1>
-        <Dividers />
-      </TitleContainer>
-      <TextWrapper>
+        <Divider />
         <p>
           At Paphos Painter Decorators we pride ourselves on our meticulous
           attention to detail and strict quality standards. Ensuring that
@@ -21,24 +24,26 @@ export const PageTitle = () => {
         </p>
         <ContactButton>Find out more</ContactButton>
       </TextWrapper>
-    </div>
+    </ImageOverlay>
   );
 };
 
-const TitleContainer = styled.div`
-  width: 70%;
-  margin-left: 10%;
+const ImageOverlay = styled.div`
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
 `;
 
 const TextWrapper = styled.div`
-  width: 23%;
+  width: 500px;
   margin: 0 0 0 10%;
-  @media (max-width: 1180px) {
-    width: 100%;
-    background-color: white;
-    margin: 0;
-    padding: 4rem;
-  }
+`;
+
+const LogoWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
 `;
 
 const ContactButton = styled.button`
@@ -47,4 +52,3 @@ const ContactButton = styled.button`
   color: #3d3f43;
   font-weight: 600;
 `;
-

@@ -1,14 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 import { colors } from "../Utils/colors";
-import { Dividers } from "../Dividers/Dividers";
+import { Divider } from "../Utils/Divider";
 import Form from "./Form";
 
 export const Contact = () => {
   return (
     <Section id='contact'>
         <H2White>Contact Us</H2White>
-        <Dividers />
+        <Divider />
         <Text>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
           malesuada congue tincidunt. Vivamus et fringilla dolor.
@@ -21,7 +21,7 @@ export const Contact = () => {
 const Section = styled.section`
   width: 100%;
   padding: 7% 10%;
-  background-color: ${colors.black};
+  background-color: ${colors.darkGrey};
 `;
 
 const H2White = styled.h2`
