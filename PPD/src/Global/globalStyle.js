@@ -86,7 +86,7 @@ h2 {
 
 p {
   font-family: 'Merriweather', Arial, Helvetica, sans-serif;
-  font-size: 1rem;
+  font-size: 0.9rem;
   line-height: 145%;
   font-weight: normal;
   letter-spacing: 0.6px;

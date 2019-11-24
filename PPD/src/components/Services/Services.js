@@ -1,8 +1,23 @@
 import React from "react";
 import styled from "styled-components";
 import { Divider } from "../Utils/Divider";
+import { Icons } from "../Icons/Icons";
+import { servicesCopy } from "./servicesCopy";
 
 export const Services = () => {
+  const data = servicesCopy;
+  let services;
+
+  if (data) {
+    services = data.map((e, i) => (
+      <FlexItem key={i}>
+        <Icons icon={e.icon} />
+        <h3>{e.title}</h3>
+        <p>{e.body}</p>
+      </FlexItem>
+    ));
+  }
+
   return (
     <Section id="services">
       <div>
@@ -10,13 +25,7 @@ export const Services = () => {
         <Divider />
         <p>Take a look at our skills and services</p>
       </div>
-      <FlexContainer>
-        <FlexItem>Service 1</FlexItem>
-        <FlexItem>Service 1</FlexItem>
-        <FlexItem>Service 1</FlexItem>
-        <FlexItem>Service 1</FlexItem>
-        <FlexItem>Service 1</FlexItem>
-      </FlexContainer>
+      <FlexContainer>{services}</FlexContainer>
     </Section>
   );
 };
@@ -39,6 +48,7 @@ const FlexContainer = styled.div`
 const FlexItem = styled.div`
   width: 20%;
   display: flex;
+  flex-direction: column;
   min-width: 200px;
   justify-content: center;
   align-items: center;
