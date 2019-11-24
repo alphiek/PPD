@@ -88,14 +88,14 @@ h3 {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 3px;
-  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 
 p {
   font-family: 'Merriweather', Arial, Helvetica, sans-serif;
   font-size: 0.9rem;
-  line-height: 145%;
+  line-height: 150%;
   font-weight: normal;
   letter-spacing: 0.6px;
   color: #4F4F4F;
