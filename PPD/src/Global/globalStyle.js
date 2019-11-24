@@ -83,6 +83,14 @@ h2 {
   line-height: 130%;
 }
 
+h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  padding-top: 1rem;
+}
+
 
 p {
   font-family: 'Merriweather', Arial, Helvetica, sans-serif;

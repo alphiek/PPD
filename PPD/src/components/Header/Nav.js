@@ -17,8 +17,8 @@ const NavLink = styled(Link)`
   :hover{
     color: white;
     font-size: 0.95rem;
-    text-shadow: -1px 0px 5px #D35B38;
     font-family: 'Impact';
+    opacity: 0.8;
     letter-spacing: 6px;
     font-weight: normal;
   }

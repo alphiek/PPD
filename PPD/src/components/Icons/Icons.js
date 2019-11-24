@@ -1,12 +1,13 @@
 import React from "react";
 import styled from "styled-components";
+import circle from '../../images/circle.svg'
 
 export const Icons = ({ icon }) => {
   switch (icon) {
     case "roller":
       return (
         <Icon>
-          <svg x="0px" y="0px" viewBox="0 0 64 64" fill="black">
+          <svg x="0px" y="0px" viewBox="0 0 64 64" fill="white">
             <g>
               <path
                 d="M61,8h-7c0-0.6-0.4-1-1-1h-3V5c0-1.7-1.3-3-3-3H9C7.3,2,6,3.3,6,5v2H3C2.4,7,2,7.4,2,8v6.2C2,14.6,2.4,15,2.8,15H6v2.5
@@ -26,7 +27,7 @@ export const Icons = ({ icon }) => {
     case "saw":
       return (
         <Icon>
-          <svg x="0px" y="0px" viewBox="0 0 64 64" fill="black">
+          <svg x="0px" y="0px" viewBox="0 0 64 64" fill="white">
             <g>
               <path
                 id="Shape"
@@ -71,7 +72,7 @@ export const Icons = ({ icon }) => {
     case "spanner":
       return (
         <Icon>
-          <svg x="0px" y="0px" viewBox="0 0 64 64" fill="black">
+          <svg x="0px" y="0px" viewBox="0 0 64 64" fill="white">
             <g>
               <path
                 d="M2.1,7.5l4,7c0.1,0.2,0.4,0.4,0.6,0.5l3.7,0.9l12.8,12.8l1.4-1.4l-13-13c-0.1-0.1-0.3-0.2-0.5-0.3l-3.6-0.9l-3.4-6l2.9-2.9
@@ -106,7 +107,7 @@ export const Icons = ({ icon }) => {
     case "wall":
       return (
         <Icon>
-          <svg x="0px" y="0px" viewBox="0 0 64 64" fill="black">
+          <svg x="0px" y="0px" viewBox="0 0 64 64" fill="white">
             <g>
               <path d="M14.8,46.1l1.1-1.9l1.7,0.9L16.5,47L14.8,46.1z" />
               <path d="M24.4,32.5c0.5-1,1.6-1.6,2.7-1.5l0.1-1.9c-1.9-0.1-3.6,0.8-4.5,2.5l-5.8,10.6l1.7,0.9L24.4,32.5z" />
@@ -131,7 +132,7 @@ export const Icons = ({ icon }) => {
     case "water":
       return (
         <Icon>
-          <svg x="0px" y="0px" viewBox="0 0 64 64" fill="black">
+          <svg x="0px" y="0px" viewBox="0 0 64 64" fill="white">
             <g>
               <path
                 id="Shape"
@@ -157,6 +158,10 @@ export const Icons = ({ icon }) => {
           </svg>
         </Icon>
       );
+    case "circle": 
+    return (
+      <Circle src={circle} alt='circle pattern' />
+    )
     default:
   }
 };
@@ -166,6 +171,15 @@ const Icon = styled.div`
   height: 4.5rem;
   padding: 0.8rem;
   border-radius: 50%;
-  border: 1px solid black;
+  border: 1px solid white;
   margin: 0 auto;
 `;
+
+const Circle = styled.img`
+  position: absolute;
+  top: -10rem;
+  right: -10rem;
+  width: 50%;
+  opacity: 0.1;
+  z-index: 2;
+  `

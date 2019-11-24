@@ -7,7 +7,7 @@ const BackgroundSection = ({ className, children }) => (
   <StaticQuery
     query={graphql`
       query {
-        hero: file(relativePath: { eq: "landing.png" }) {
+        hero: file(relativePath: { eq: "hero.jpg" }) {
           childImageSharp {
             fluid(quality: 90, maxWidth: 1920) {
               ...GatsbyImageSharpFluid
@@ -37,9 +37,10 @@ const StyledBackgroundSection = styled(BackgroundSection)`
   width: 100%;
   min-height: 90vh;
   position: relative;
-  background-position: top right;
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
+  z-index: 1;
 `
 
 export default StyledBackgroundSection
