@@ -95,7 +95,6 @@ export const Submit = styled.button`
   background: -webkit-linear-gradient(to bottom, #f09819, #fa9917);
   background: linear-gradient(to bottom, #f09819, #fa9917);
   color: ${colors.textnav};
-  text-transform: uppercase;
   font-weight: 700;
   transition: 300ms ease-in-out all;
   &:hover {

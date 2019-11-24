@@ -179,7 +179,7 @@ const Circle = styled.img`
   position: absolute;
   top: -10rem;
   right: -10rem;
-  width: 50%;
+  width: 30%;
   opacity: 0.1;
   z-index: 2;
   `

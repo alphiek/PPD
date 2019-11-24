@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { Divider } from "../Utils/Divider";
 import { colors } from "../Utils/colors";
+import { Icons } from "../Icons/Icons";
 
 export const Gallery = () => {
   const [showing, setShowing] = useState("0");
@@ -35,18 +36,22 @@ export const Gallery = () => {
           Four
         </ProjectThree>
       </GridParent>
+      <Icons icon="circle" />
     </Section>
   );
 };
 
 const Section = styled.section`
+  position: relative;
   width: auto;
   margin-top: 5%;
   padding: 5% 15%;
 `;
 
 const GridParent = styled.div`
+  background: white;
   display: grid;
+  z-index: 20;
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: minmax(350px, auto);
   grid-gap: 1%;
@@ -55,6 +60,7 @@ const GridParent = styled.div`
 `;
 
 const Flex = styled.div`
+  background-color: white;
   display: flex;
   width: 100%;
   height: 100%;

@@ -31,7 +31,6 @@ export const PageTitle = () => {
 const ImageOverlay = styled.div`
   width: 100%;
   min-height: 90vh;
-  background-color: rgba(255, 255, 255, 0.5);
   display: flex;
   align-items: center;
 `;
