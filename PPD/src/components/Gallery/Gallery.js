@@ -6,6 +6,7 @@ import { Icons } from "../Icons/Icons";
 import { Polemi } from "../Slider/Polemi";
 import { Mesogi } from "../Slider/Mesogi";
 import { Paphos } from "../Slider/Paphos";
+import elevation from '../Utils/elevation'
 
 export const Gallery = () => {
   const [showing, setShowing] = useState("0");
@@ -68,7 +69,7 @@ const GridParent = styled.div`
   z-index: 20;
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: minmax(350px, auto);
-  grid-gap: 1%;
+  grid-gap: 3%;
   grid-auto-flow: dense;
   margin: 5% 0;
 `;
@@ -79,10 +80,10 @@ const Flex = styled.div`
   width: 100%;
   height: 100%;
   flex-direction: column;
-  border: 1px solid black;
   grid-column: ${props => (props.isActive ? "span 4" : "span 2")};
   grid-row: ${props => (props.isActive ? "span 2" : "span 1")};
   cursor: pointer;
+  ${elevation[3]};
 `;
 
 const ProjectOne = styled(Flex)``;
