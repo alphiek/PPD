@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Divider } from "../Utils/Divider";
 import Logo from "./Logo";
+import ContactForm from "./ContactForm";
 
 export const PageTitle = () => {
   return (
@@ -22,8 +23,8 @@ export const PageTitle = () => {
           your home whilst creating a stunning finish for you to enjoy year
           after year. With a wealth of industry experience you're in safe hands.
         </p>
-        <ContactButton>Find out more</ContactButton>
       </TextWrapper>
+      <ContactForm />
     </ImageOverlay>
   );
 };
@@ -31,7 +32,6 @@ export const PageTitle = () => {
 const ImageOverlay = styled.div`
   width: 100%;
   min-height: 90vh;
-  background-color: rgba(255, 255, 255, 0.5);
   display: flex;
   align-items: center;
 `;
@@ -49,11 +49,4 @@ const LogoWrapper = styled.div`
   display: flex;
   align-items: center;
   margin-bottom: 2rem;
-`;
-
-const ContactButton = styled.button`
-  margin-top: 2rem;
-  background-color: white;
-  color: #3d3f43;
-  font-weight: 600;
 `;

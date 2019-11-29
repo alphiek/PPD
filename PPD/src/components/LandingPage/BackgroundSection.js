@@ -1,13 +1,13 @@
-import React from 'react'
-import { graphql, StaticQuery } from 'gatsby'
-import styled from 'styled-components'
-import BackgroundImage from 'gatsby-background-image'
+import React from "react";
+import { graphql, StaticQuery } from "gatsby";
+import styled from "styled-components";
+import BackgroundImage from "gatsby-background-image";
 
 const BackgroundSection = ({ className, children }) => (
   <StaticQuery
     query={graphql`
       query {
-        hero: file(relativePath: { eq: "hero.jpg" }) {
+        hero: file(relativePath: { eq: "landing.png" }) {
           childImageSharp {
             fluid(quality: 90, maxWidth: 1920) {
               ...GatsbyImageSharpFluid
@@ -17,10 +17,10 @@ const BackgroundSection = ({ className, children }) => (
       }
     `}
     render={data => {
-      const imageData = data.hero.childImageSharp.fluid
+      const imageData = data.hero.childImageSharp.fluid;
       return (
         <BackgroundImage
-          id='about'
+          id="about"
           Tag="section"
           className={className}
           fluid={imageData}
@@ -28,19 +28,19 @@ const BackgroundSection = ({ className, children }) => (
         >
           {children}
         </BackgroundImage>
-      )
+      );
     }}
   />
-)
+);
 
 const StyledBackgroundSection = styled(BackgroundSection)`
   width: 100%;
   min-height: 90vh;
   position: relative;
-  background-position: center;
+  background-position: right;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   z-index: 1;
-`
+`;
 
-export default StyledBackgroundSection
+export default StyledBackgroundSection;
