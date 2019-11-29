@@ -4,7 +4,7 @@ import { Divider } from "../Utils/Divider";
 import { Icons } from "../Icons/Icons";
 import elevation from "../Utils/elevation";
 import { servicesCopy } from "./servicesCopy";
-import table from '../../images/table.jpg'
+import table from "../../images/table.jpg";
 
 export const Services = () => {
   const data = servicesCopy;
@@ -20,9 +20,6 @@ export const Services = () => {
           <h3>{e.title}</h3>
           <p>{e.body}</p>
           <HR color={e.color} />
-          <CTA>
-            Some CTA <Arrow>&#x219C;</Arrow>
-          </CTA>
         </Border>
       </FlexItem>
     ));
@@ -33,19 +30,29 @@ export const Services = () => {
       <TextRight>
         <h2>Our Services and Skills</h2>
         <Divider />
-        <p>
-          Over the years we have grown our expertise to expand over a broad<br/>
+        <BodyRight>
+          Over the years we have grown our expertise to expand over a broad
+          <br />
           range of skills suited perfectly to the Paphos climate & materials.
-        </p>
-        <p>Check out what we do best below!</p>
+        </BodyRight>
+        <SubtextRight>Check out what we do best below!</SubtextRight>
       </TextRight>
       <FlexContainer>{services}</FlexContainer>
-      <Table src={table} alt='picture of a living room' />
+      <Table src={table} alt="picture of a living room" />
       <Icons icon="circle" />
       <BottomCircle />
     </Section>
   );
 };
+
+const BodyRight = styled.p`
+  text-align: right;
+`;
+
+const SubtextRight = styled(BodyRight)`
+  font-weight: bolder;
+  margin-top: 2.5rem;
+`;
 
 const Section = styled.section`
   position: relative;
@@ -90,44 +97,30 @@ const HR = styled.hr`
   border: none;
 `;
 
-const CTA = styled.a`
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  float: right;
-  font-weight: 900;
-  letter-spacing: 3px;
-  opacity: 0.6;
-`;
-
-const Arrow = styled.span`
-  font-size: 1.2rem;
-`;
-
 const TextRight = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   margin-right: 5%;
-`
+`;
 
 const Table = styled.img`
-position: absolute;
-top: 40%;
-left: -10rem;
-border-radius: 50%;
-height: 600px;
-width: 600px;
-object-fit: cover;
-object-position: center;
-`
+  position: absolute;
+  top: 40%;
+  left: -10rem;
+  border-radius: 50%;
+  height: 600px;
+  width: 600px;
+  object-fit: cover;
+  object-position: center;
+`;
 
 const BottomCircle = styled.div`
-background: lightgray;
-position: absolute;
-bottom: -10rem;
-right: -10rem;
-border-radius: 50%;
-height: 500px;
-width: 500px;
-
-`
+  background: lightgray;
+  position: absolute;
+  bottom: -10rem;
+  right: -10rem;
+  border-radius: 50%;
+  height: 500px;
+  width: 500px;
+`;

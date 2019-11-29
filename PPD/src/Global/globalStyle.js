@@ -46,9 +46,12 @@ section {
 header {
   position: fixed;
   top: 0;
-  right: 0;
+  left: 0;
   z-index: 50;
-  max-height: 100px;
+  height: 80px;
+  width: 100%;
+  background: white;
+  box-shadow: 0 10px 20px rgba(75,74,104,0.10), 0 6px 6px rgba(75,74,104,0.10);
 }
 
 nav {
@@ -57,14 +60,13 @@ nav {
   position: fixed;
   right: -1000px;
   top: 0;
-  height: 100%;
   width: 950px;
   background-color: white;
   height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: slidein 0.8s ease-in-out 1s 1 forwards;
+  animation: slidein 0.8s ease-in-out 1s 1 forwards;  
   @media(max-width: 950px) {
     width: 100%;
   }

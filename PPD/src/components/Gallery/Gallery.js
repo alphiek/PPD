@@ -46,6 +46,7 @@ const Section = styled.section`
   width: auto;
   margin-top: 5%;
   padding: 5% 15%;
+  overflow: hidden;
 `;
 
 const GridParent = styled.div`
