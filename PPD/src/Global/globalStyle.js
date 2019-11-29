@@ -7,6 +7,8 @@ html {
   font-size: 16px;
   background-color: white;
   width: 100%;
+  overflow-x: hidden;
+  position: relative;
 }
 
 

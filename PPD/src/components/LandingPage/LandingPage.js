@@ -1,12 +1,12 @@
 import React from "react";
-import { PageTitle } from './PageTitle'
-import BackgroundSection from './BackgroundSection'
+import { PageTitle } from "./PageTitle";
+import BackgroundSection from "./BackgroundSection";
 
 const LandingPage = () => {
   return (
-      <BackgroundSection>
-        <PageTitle />
-      </BackgroundSection>
+    <BackgroundSection>
+      <PageTitle />
+    </BackgroundSection>
   );
 };
 
