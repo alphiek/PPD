@@ -51,7 +51,7 @@ header {
   height: 80px;
   width: 100%;
   background: white;
-  box-shadow: 0 10px 20px rgba(75,74,104,0.10), 0 6px 6px rgba(75,74,104,0.10);
+  box-shadow: 0 3px 6px rgba(75,74,104,0.16), 0 3px 6px rgba(75,74,104,0.23);
 }
 
 nav {

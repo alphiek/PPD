@@ -107,10 +107,10 @@ const TextRight = styled.div`
 const Table = styled.img`
   position: absolute;
   top: 40%;
-  left: -10rem;
+  left: -8rem;
   border-radius: 50%;
-  height: 600px;
-  width: 600px;
+  height: 400px;
+  width: 400px;
   object-fit: cover;
   object-position: center;
 `;
