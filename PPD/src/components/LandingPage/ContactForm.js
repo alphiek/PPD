@@ -109,6 +109,9 @@ const FormWrapper = styled.form`
   background: ${colors.medDarkGrey};
   border-radius: 0.5rem;
   ${elevation[3]};
+  @media (max-width: 1180px) {
+    display: none;
+  }
 `;
 
 const Button = styled.button`

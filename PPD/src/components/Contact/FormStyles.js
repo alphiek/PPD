@@ -17,11 +17,17 @@ export const FormWrapper = styled.form`
 export const LeftWrapper = styled.div`
   grid-area: left;
   width: 85%;
+  @media (max-width: 1180px) {
+    width: 100%;
+  }
 `;
 
 export const RightWrapper = styled.div`
   grid-area: right;
   width: 90%;
+  @media (max-width: 1180px) {
+    width: 100%;
+  }
 `;
 
 export const InputWrapper = styled.input`
