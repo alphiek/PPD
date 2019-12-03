@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Img from "gatsby-image";
 import styled from "styled-components";
 import { LeftArrow, RightArrow } from "./Arrows";
+import { Text } from "./Text";
 
 export const Slider = ({ slides }) => {
   let [index, setIndex] = useState(0);
@@ -21,11 +22,11 @@ export const Slider = ({ slides }) => {
 
   return (
     <SliderContainer>
-        <Image
-          fluid={node.childImageSharp.fluid}
-          key={node.id}
-          alt={node.name.replace(/-/g, " ").substring(2)}
-        />
+      <Image
+        fluid={node.childImageSharp.fluid}
+        key={node.id}
+        alt={node.name.replace(/-/g, " ").substring(2)}
+      />
       <ArrowContainer>
         <LeftArrow goToPrevSlide={goToPrevSlide} />
         <RightArrow goToNextSlide={goToNextSlide} />
@@ -46,8 +47,7 @@ const ArrowContainer = styled.div`
   justify-content: space-between;
 `;
 
-
 const Image = styled(Img)`
   height: 300px;
   width: 100%;
-`
+`;

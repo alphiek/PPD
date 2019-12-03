@@ -6,7 +6,8 @@ import { Icons } from "../Icons/Icons";
 import { Polemi } from "../Slider/Polemi";
 import { Mesogi } from "../Slider/Mesogi";
 import { Paphos } from "../Slider/Paphos";
-import elevation from '../Utils/elevation'
+import elevation from "../Utils/elevation";
+import { Text } from "../Slider/Text";
 
 export const Gallery = () => {
   const [showing, setShowing] = useState("0");
@@ -22,12 +23,14 @@ export const Gallery = () => {
       <GridParent>
         <ProjectOne isActive={isShowing("1")}>
           <Polemi />
+          {showing === "1" && <Text showing={showing} />}
           <Button onClick={toggleActive} id="1">
             {showing === "1" ? "close" : "view project info"}
           </Button>
         </ProjectOne>
         <ProjectTwo isActive={isShowing("2")}>
           <Mesogi />
+          {showing === "2" && <Text showing={showing} />}
           <Button onClick={toggleActive} id="2">
             {showing === "2" ? "close" : "view project info"}
           </Button>
@@ -45,6 +48,7 @@ export const Gallery = () => {
         </TitleWrapper>
         <ProjectThree isActive={isShowing("3")}>
           <Paphos />
+          {showing === "3" && <Text showing={showing} />}
           <Button onClick={toggleActive} id="3">
             {showing === "3" ? "close" : "view project info"}
           </Button>
