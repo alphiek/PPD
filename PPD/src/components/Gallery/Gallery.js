@@ -74,6 +74,10 @@ const GridParent = styled.div`
   grid-gap: 3%;
   grid-auto-flow: dense;
   margin: 5% 0;
+  @media (max-width: 1180px) {
+    grid-template-columns: 100%;
+    margin-bottom: 10rem;
+  }
 `;
 
 const Flex = styled.div`
@@ -87,13 +91,30 @@ const Flex = styled.div`
   cursor: pointer;
   ${elevation[3]};
   position: relative;
+  @media (max-width: 1180px) {
+    grid-column: span 1;
+    margin-bottom: 10rem;
+    grid-row: span 1;
+  }
 `;
 
-const ProjectOne = styled(Flex)``;
+const ProjectOne = styled(Flex)`
+  @media (max-width: 1180px) {
+    order: 2;
+  }
+`;
 
-const ProjectTwo = styled(Flex)``;
+const ProjectTwo = styled(Flex)`
+  @media (max-width: 1180px) {
+    order: 3;
+  }
+`;
 
-const ProjectThree = styled(Flex)``;
+const ProjectThree = styled(Flex)`
+  @media (max-width: 1180px) {
+    order: 4;
+  }
+`;
 
 const TitleWrapper = styled.div`
   grid-column: ${props => (props.state !== "0" ? "span 4" : "span 2")};
@@ -103,6 +124,10 @@ const TitleWrapper = styled.div`
   border: 6px solid ${colors.orange};
   align-items: center;
   padding: 0 10% 0 15%;
+  @media (max-width: 1180px) {
+    order: 1;
+    grid-column: span 1;
+  }
 `;
 
 const Button = styled.button`

@@ -32,7 +32,6 @@ export const Services = () => {
         <Divider />
         <BodyRight>
           Over the years we have grown our expertise to expand over a broad
-          <br />
           range of skills suited perfectly to the Paphos climate & materials.
         </BodyRight>
         <SubtextRight>Check out what we do best below!</SubtextRight>
@@ -47,6 +46,11 @@ export const Services = () => {
 
 const BodyRight = styled.p`
   text-align: right;
+  width: 45%;
+  @media (max-width: 1180px) {
+    text-align: left;
+    width: 80%;
+  }
 `;
 
 const SubtextRight = styled(BodyRight)`
@@ -77,16 +81,29 @@ const FlexItem = styled.div`
   align-items: flex-start;
   padding: 2rem 0;
   width: 70%;
+  @media (max-width: 1180px) {
+    width: 100%;
+  }
+  @media (max-width: 480px) {
+    flex-direction: column;
+    padding: 0;
+  }
 `;
 
 const TextWrapper = styled.div`
   background-color: ${props => props.color};
   padding: 1rem;
   ${elevation[3]};
+  @media (max-width: 480px) {
+    margin: 2rem 0;
+  }
 `;
 
 const Border = styled.div`
   padding: 0 2rem;
+  @media (max-width: 480px) {
+    padding: 0;
+  }
 `;
 
 const HR = styled.hr`
@@ -102,6 +119,9 @@ const TextRight = styled.div`
   flex-direction: column;
   align-items: flex-end;
   margin-right: 5%;
+  @media (max-width: 1180px) {
+    align-items: flex-start;
+  }
 `;
 
 const Table = styled.img`
@@ -113,6 +133,9 @@ const Table = styled.img`
   width: 400px;
   object-fit: cover;
   object-position: center;
+  @media (max-width: 1180px) {
+    display: none;
+  }
 `;
 
 const BottomCircle = styled.div`
