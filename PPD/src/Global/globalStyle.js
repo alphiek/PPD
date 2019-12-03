@@ -95,6 +95,12 @@ h3 {
   padding-bottom: 1rem;
 }
 
+h4 {
+  font-size: 2.369rem;
+  line-height: 130%;
+  margin-bottom: 2rem;
+}
+
 
 p {
   font-family: 'Merriweather', Arial, Helvetica, sans-serif;

@@ -1,9 +1,8 @@
 import React from "react";
 import { text } from "../text";
+import styled from "styled-components";
 
 export const Text = ({ showing }) => {
-  console.log(typeof showing);
-
   let title;
   let body;
 
@@ -23,8 +22,16 @@ export const Text = ({ showing }) => {
 
   return (
     <>
-      <p>{title}</p>
-      <p>{body}</p>
+      <TextContainer>
+        <h4>{title}</h4>
+        <p>{body}</p>
+      </TextContainer>
     </>
   );
 };
+
+const TextContainer = styled.div`
+  position: relative;
+  flex: 1;
+  margin: 1rem 4rem;
+`;

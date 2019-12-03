@@ -17,7 +17,6 @@ export const Gallery = () => {
     e.target.id === showing ? setShowing("0") : setShowing(e.target.id);
   };
 
-  console.log(showing);
   return (
     <Section id="gallery">
       <GridParent>
@@ -62,8 +61,7 @@ export const Gallery = () => {
 const Section = styled.section`
   position: relative;
   width: auto;
-  margin-top: 5%;
-  padding: 5% 15%;
+  padding: 10% 15%;
   overflow: hidden;
 `;
 
@@ -88,6 +86,7 @@ const Flex = styled.div`
   grid-row: ${props => (props.isActive ? "span 2" : "span 1")};
   cursor: pointer;
   ${elevation[3]};
+  position: relative;
 `;
 
 const ProjectOne = styled(Flex)``;
@@ -107,6 +106,9 @@ const TitleWrapper = styled.div`
 `;
 
 const Button = styled.button`
+  position: relative;
+  bottom: 0;
+  left: 0;
   width: 100%;
   height: 80px;
   text-transform: uppercase;

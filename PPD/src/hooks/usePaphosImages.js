@@ -12,7 +12,7 @@ export const usePaphosImages = () => {
               id
               name
               childImageSharp {
-                fluid(maxWidth: 600) {
+                fluid(maxWidth: 1000) {
                   ...GatsbyImageSharpFluid_withWebp_tracedSVG
                 }
               }

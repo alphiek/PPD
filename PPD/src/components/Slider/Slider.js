@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Img from "gatsby-image";
 import styled from "styled-components";
 import { LeftArrow, RightArrow } from "./Arrows";
-import { Text } from "./Text";
 
 export const Slider = ({ slides }) => {
   let [index, setIndex] = useState(0);
@@ -38,7 +37,6 @@ export const Slider = ({ slides }) => {
 const SliderContainer = styled.div`
   position: relative;
   width: 100%;
-  height: 100%;
 `;
 
 const ArrowContainer = styled.div`
